@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Header from './components/Header';
+
+const logo = {
+  link: '/',
+  src: '/logo.png'
+}
+
+ReactDOM.render(<Header logo={logo}/>, document.getElementById('root'));
 registerServiceWorker();

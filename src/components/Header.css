@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a {
+  text-decoration: none;
+}
+.header-trending {
+  text-transform: uppercase;
+  color: #666666;
+}
+.header-trending:hover {
+  color: #50BCB6;
+}
+
+.header .logo {
+  max-height: 30px;
+  max-width: 30px;
+}
