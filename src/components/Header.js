@@ -9,8 +9,6 @@ export default (props) => (
     <a className="header-trending" href='/trending'>
       Trending Stories
     </a>
-    <Logo src={props.logo.src}
-      link={props.logo.link}
-    />
+    <Logo />
   </header>
 )
