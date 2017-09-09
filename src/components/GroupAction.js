@@ -12,18 +12,9 @@ class GroupAction extends Component {
     return (
       <div className={groupClasses}>
         <button className="group-action-select-all"
-         onClick={(e) => this.props.selectAll(e)}></button>
+         onClick={this.props.selectAll}></button>
         <button className="group-action-bookmark-all"
-         onClick={(e) => this.props.bookmarkAll(e)}></button>
-        {/* <button className="group-action-reset-selects">
-          reset selection
-        </button>
-        <button className="group-action-bookmark-all">
-          bookmark all
-        </button>
-        <button className="group-action-reset-bookmarks">
-          reset bookmarks
-        </button> */}
+         onClick={this.props.bookmarkAll}></button>
       </div>
     )
   }
