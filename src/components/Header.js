@@ -7,7 +7,7 @@ import Logo from './Logo';
 export default (props) => (
   <header className='header'>
     <a className="header-trending" href='/trending'>
-      Trending Stories
+      Trending Articles
     </a>
     <Logo />
   </header>

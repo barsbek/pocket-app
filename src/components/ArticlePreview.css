@@ -1,0 +1,92 @@
+.article-previews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article-preview {
+  width: 24%;
+  background-color: #222222;
+  box-shadow: 0 0 5px #111;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom-left-radius: .2em;
+  border-bottom-right-radius: .2em;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.article-preview:hover {
+  box-shadow: 0 0 10px #000;
+}
+
+.article-preview-selected .article-preview-select {
+  opacity: 1;
+}
+
+.article-preview-bookmarked .article-preview-bookmark {
+  color: #ef4056;
+}
+
+.article-preview-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('/icons/selected.ico');
+  background-position: center right 10px;
+  background-size: auto 70%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 3em;
+  z-index: 2;
+  opacity: 0;
+  transition: .2s;
+}
+.article-preview-select:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.article-preview-image {
+  padding-top: 75%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.article-preview-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.article-preview-header {
+  color: inherit;
+  padding: 0 10px;
+}
+.article-preview-link {
+  flex-grow: 1;
+}
+.article-preview-link:hover .article-preview-header {
+  color: #50BCB6;
+}
+
+.article-preview-body {
+  position: relative;
+  z-index: 2;
+}
+.article-preview-bookmark {
+  display: block;
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+.article-preview-bookmark:hover {
+  color: #ef4056;
+}
+.article-preview-bookmark:before {
+  content: '';
+  height: 1px;
+  display: block;
+  background-color: #666666;
+  margin-bottom: .75em;
+}
