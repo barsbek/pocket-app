@@ -21,10 +21,6 @@
   box-shadow: 0 0 10px #000;
 }
 
-.article-preview-selected .article-preview-select {
-  opacity: 1;
-}
-
 .article-preview-bookmarked .article-preview-bookmark {
   color: #ef4056;
 }
@@ -46,6 +42,9 @@
 .article-preview-select:hover {
   opacity: .8;
   cursor: pointer;
+}
+.article-preview-selected .article-preview-select {
+  opacity: 1;
 }
 
 .article-preview-image {
