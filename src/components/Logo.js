@@ -4,6 +4,6 @@ import './Logo.css';
 
 export default (props) => (
   <a className="logo" href="/">
-    <img className="logo-image" src="/logo.png" alt="logo"></img>
+    <img className="logo-image" src="/icons/logo.png" alt="logo"></img>
   </a>
 )
