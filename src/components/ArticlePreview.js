@@ -3,35 +3,11 @@ import React, {Component} from 'react';
 import './ArticlePreview.css';
 
 class ArticlePreview extends Component{
-  constructor() {
-    super();
-    this.state={
-      selected: false,
-      bookmarked: false,
-    }
-  }
-
-  // handlers
-  handleSelect = (e) => {
-    e.preventDefault();
-    this.setState({
-      selected: !this.state.selected,
-    });
-  }
-
-  handleBookmark = (e) => {
-    e.preventDefault();
-    this.setState({
-      bookmarked: !this.state.bookmarked,
-    });
-  }
-
-
   render() {
     const articleClasses = [
       "article-preview",
-      this.state.selected ? "article-preview-selected" : null,
-      this.state.bookmarked ? "article-preview-bookmarked" : null,
+      this.props.selected ? "article-preview-selected" : null,
+      this.props.bookmarked ? "article-preview-bookmarked" : null,
     ].join(' ');
 
     return (
@@ -40,7 +16,7 @@ class ArticlePreview extends Component{
           href={this.props.link}>
           <button className="article-preview-select"
             href="#"
-            onClick={this.handleSelect}>
+            onClick={this.props.onSelect}>
           </button>
           <div className="article-preview-image"
             style={{backgroundImage: `url(${this.props.img})`}}>
@@ -52,8 +28,8 @@ class ArticlePreview extends Component{
         <div className="article-preview-body">
           <a className="article-preview-bookmark"
             href="#"
-            onClick={this.handleBookmark}>
-            {this.state.bookmarked ? "Bookmarked" : "Bookmark the article"}
+            onClick={this.props.onBookmark}>
+            {this.props.bookmarked ? "Bookmarked" : "Bookmark the article"}
           </a>
         </div>
       </article>
