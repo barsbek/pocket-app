@@ -23,7 +23,6 @@ class Container extends Component {
     articles[index].selected = !articles[index].selected;
     if(articles[index].selected) this.selectedNumber++;
     else this.selectedNumber--;
-    console.log(this.selectedNumber);
     this.setState({articles: articles});
   }
 
@@ -40,7 +39,6 @@ class Container extends Component {
   bookmarkAll = (e) => {
     e.preventDefault();
     let allBookmarked = this.bookmarkedNumber === this.state.articles.length;
-    console.log(allBookmarked);
     if(allBookmarked) this.bookmarkedNumber = 0;
     else this.bookmarkedNumber = this.state.articles.length;
 
