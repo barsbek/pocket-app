@@ -75,11 +75,7 @@ class Container extends Component {
     return this.state.articles.map((article, index) => 
       <ArticlePreview
         key={index}
-        title={article.title}
-        img={article.img}
-        link={article.link}
-        selected={article.selected}
-        bookmarked={article.bookmarked}
+        {...article}
         onSelect={(e) => this.handleSelect(e, index)}
         onBookmark={(e) => this.handleBookmark(e, index)}
       />
